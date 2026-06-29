@@ -1,9 +1,20 @@
 {
-  "name": "My Offline App",
-  "short_name": "OfflineApp",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
-  "icons": []
+  "name": "Habit Hero",
+  "short_name": "HabitHero",
+  "description": "Track habits and reward your progress seamlessly.",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "habit_hero.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "habit_hero.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#F8F7FF",
+  "theme_color": "#6C63FF"
 }
