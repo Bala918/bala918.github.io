@@ -32,8 +32,6 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-
-  /* NAV */
   .topbar { background: linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%); padding: 16px 20px 0; color: white; }
   .topbar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .app-title-container { display: flex; align-items: center; gap: 10px; }
@@ -44,16 +42,10 @@
   .nav::-webkit-scrollbar { display: none; }
   .nav button { flex-shrink: 0; padding: 10px 18px; border: none; background: transparent; color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 500; cursor: pointer; border-bottom: 3px solid transparent; transition: all .2s; white-space: nowrap; font-family: inherit; }
   .nav button.active { color: white; border-bottom-color: white; }
-
-  /* PAGES */
   .page { display: none; padding: 16px; max-width: 680px; margin: 0 auto; }
   .page.active { display: block; }
-
-  /* CARDS */
   .card { background: var(--card); border-radius: var(--radius); padding: 18px; margin-bottom: 14px; box-shadow: var(--shadow); border: 1px solid var(--border); }
   .card-title { font-size: 15px; font-weight: 600; margin-bottom: 14px; color: var(--text); display: flex; align-items: center; gap: 8px; }
-
-  /* METRIC GRID */
   .metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px; }
   .metric-grid.cols3 { grid-template-columns: repeat(3, 1fr); }
   .metric { background: var(--card); border-radius: var(--radius-sm); padding: 14px 12px; box-shadow: var(--shadow); border: 1px solid var(--border); text-align: center; }
@@ -63,8 +55,6 @@
   .metric.green .val { color: var(--success); }
   .metric.orange .val { color: var(--warning); }
   .metric.red .val { color: var(--danger); }
-
-  /* HABIT ITEMS */
   .habit-item { display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--card); margin-bottom: 10px; box-shadow: var(--shadow); transition: all .15s; }
   .habit-item:hover { box-shadow: var(--shadow-md); }
   .habit-check { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .2s; font-size: 14px; }
@@ -73,8 +63,6 @@
   .habit-name { font-size: 15px; font-weight: 600; }
   .habit-meta { font-size: 12px; color: var(--text2); margin-top: 4px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
   .habit-right { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; }
-
-  /* BADGES */
   .badge { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
   .b-do { background: var(--success-light); color: #16A34A; }
   .b-dont { background: var(--danger-light); color: #DC2626; }
@@ -84,8 +72,6 @@
   .b-diff-hard { background: #FEE2E2; color: #B91C1C; }
   .pts-badge { background: var(--warning-light); color: #B45309; font-size: 12px; padding: 3px 9px; border-radius: 20px; font-weight: 700; }
   .streak-badge { background: var(--pro-light); color: var(--pro); font-size: 12px; padding: 3px 9px; border-radius: 20px; font-weight: 700; }
-
-  /* BUTTONS */
   .btn { padding: 10px 20px; border-radius: var(--radius-sm); border: 1.5px solid var(--border); background: white; cursor: pointer; font-size: 13px; font-family: inherit; font-weight: 500; color: var(--text); transition: all .15s; }
   .btn:hover { background: var(--bg); }
   .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
@@ -96,82 +82,52 @@
   .btn-icon { padding: 6px 10px; font-size: 14px; }
   .btn-pill { border-radius: 20px; padding: 6px 14px; font-size: 12px; }
   .icon-btn-row { display: flex; gap: 6px; }
-
-  /* SECTION HEADER */
   .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
   .sec-title { font-size: 17px; font-weight: 700; }
-
-  /* FORMS */
   .form-group { margin-bottom: 14px; }
   .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 6px; }
   .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; background: var(--bg); color: var(--text); outline: none; transition: border-color .2s; }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary); background: white; }
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-  /* PROGRESS BAR */
   .prog-wrap { height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
   .prog-fill { height: 100%; background: var(--primary); border-radius: 4px; transition: width .4s; }
   .prog-fill.full { background: var(--success); }
-
-  /* BAR CHART */
   .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
   .bar-lbl { font-size: 12px; color: var(--text2); width: 32px; text-align: right; flex-shrink: 0; }
   .bar-outer { flex: 1; height: 16px; background: var(--bg); border-radius: 8px; overflow: hidden; }
   .bar-inner { height: 100%; border-radius: 8px; background: var(--primary); transition: width .3s; }
   .bar-val { font-size: 12px; color: var(--text2); width: 38px; text-align: right; flex-shrink: 0; font-weight: 600; }
-
-  /* MODAL */
   .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: flex-end; justify-content: center; z-index: 999; }
   @media(min-width:480px) { .modal-bg { align-items: center; } }
   .modal { background: white; border-radius: 20px 20px 0 0; padding: 24px 20px 32px; width: 100%; max-width: 500px; max-height: 92vh; overflow-y: auto; }
   @media(min-width:480px) { .modal { border-radius: 20px; } }
   .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 18px; }
   .modal-foot { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
-
-  /* REWARD */
-  .reward-item { display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--card); margin-bottom: 10px; box-shadow: var(--shadow); }
+  .reward-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--card); margin-bottom: 10px; box-shadow: var(--shadow); }
   .reward-emoji { width: 48px; height: 48px; border-radius: 12px; background: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
   .reward-info { flex: 1; min-width: 0; }
   .reward-name { font-size: 15px; font-weight: 600; }
   .reward-pts { font-size: 12px; color: var(--text2); margin-top: 2px; }
-
-  /* INSIGHT */
   .insight { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--primary-light); margin-bottom: 8px; }
   .insight-icon { font-size: 18px; flex-shrink: 0; }
   .insight-text { font-size: 13px; color: var(--text); line-height: 1.5; }
-
-  /* PSYCHOLOGY */
   .urge-item { background: var(--warning-light); border: 1px solid #FDE68A; border-radius: var(--radius-sm); padding: 11px 14px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
   .why-box { background: var(--pro-light); border: 1px solid #C4B5FD; border-radius: var(--radius-sm); padding: 14px; margin-top: 10px; font-style: italic; color: var(--pro); font-size: 14px; line-height: 1.5; }
   .trigger-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
   .trigger-chip { background: var(--primary-light); color: var(--primary); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
-
-  /* TIMER */
   .timer-display { font-size: 48px; font-weight: 800; color: var(--primary); letter-spacing: -2px; }
   .timer-row { display: flex; align-items: center; gap: 14px; }
-
-  /* QUICK PILLS */
   .quick-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
   .quick-pill { background: var(--bg); border: 1.5px solid var(--border); border-radius: 20px; padding: 5px 13px; font-size: 12px; font-weight: 500; cursor: pointer; color: var(--text2); transition: all .15s; }
   .quick-pill:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
-
-  /* TOAST */
   .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px); background: #1E1E2E; color: white; padding: 12px 22px; border-radius: 30px; font-size: 14px; font-weight: 500; z-index: 9999; transition: transform .3s, opacity .3s; opacity: 0; white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,.25); }
   .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-
-  /* TABS */
   .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
   .tab { padding: 7px 16px; border-radius: 20px; border: 1.5px solid var(--border); background: white; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text2); font-family: inherit; transition: all .15s; }
   .tab.active { background: var(--primary); color: white; border-color: var(--primary); }
-
-  /* DIVIDER */
   hr { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
-
-  /* EMPTY */
   .empty { text-align: center; padding: 36px 20px; color: var(--text3); font-size: 14px; }
   .empty-icon { font-size: 36px; margin-bottom: 10px; }
-
-  /* EFFICIENCY RING */
   .eff-section { display: flex; align-items: center; gap: 18px; padding: 4px 0 10px; }
   .ring-wrap { position: relative; width: 80px; height: 80px; flex-shrink: 0; }
   .ring-wrap svg { transform: rotate(-90deg); }
@@ -182,17 +138,11 @@
   .eff-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
   .eff-label { font-size: 13px; color: var(--text2); }
   .eff-val { font-size: 13px; font-weight: 700; }
-
-  /* REWARD CUSTOM HABIT SELECTS */
   .habit-checklist-container { border: 1.5px solid var(--border); border-radius: var(--radius-sm); max-height: 160px; overflow-y: auto; padding: 8px; background: var(--bg); margin-top: 6px; }
   .checklist-item { display: flex; align-items: center; gap: 8px; padding: 6px 4px; font-size: 13px; cursor: pointer; }
   .checklist-item input { width: auto; }
-
-  @media(max-width:400px) {
-    .form-grid { grid-template-columns: 1fr; }
-    .metric-grid.cols3 { grid-template-columns: repeat(3, 1fr); }
-    .metric .val { font-size: 20px; }
-  }
+  .reward-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+  @media(max-width:400px) { .form-grid { grid-template-columns: 1fr; } .metric-grid.cols3 { grid-template-columns: repeat(3, 1fr); } .metric .val { font-size: 20px; } }
 </style>
 </head>
 <body>
@@ -272,17 +222,15 @@
   <div id="report-content"></div>
 </div>
 
-<!-- PSYCHOLOGY / QUIT AID -->
+<!-- PSYCHOLOGY -->
 <div class="page" id="page-psychology">
   <br>
-  <!-- Urge surfing -->
   <div class="card">
     <div class="card-title">🌊 Urge surfing</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:12px">Log every urge. Each urge you resist earns +10 pts.</p>
     <div id="urge-list"></div>
     <button class="btn btn-primary" onclick="openLogUrge()" style="margin-top:10px;width:100%">+ Log an urge now</button>
   </div>
-  <!-- Delay timer -->
   <div class="card">
     <div class="card-title">⏱️ Craving delay timer</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:14px">Delay acting on a craving for 10 min. Each delay = +5 pts.</p>
@@ -293,7 +241,6 @@
     </div>
     <div id="timer-done" style="display:none;margin-top:10px;padding:10px 14px;background:var(--success-light);border-radius:var(--radius-sm);color:#15803D;font-size:13px;font-weight:600">🎉 Delay complete! +5 points earned.</div>
   </div>
-  <!-- Trigger log -->
   <div class="card">
     <div class="card-title">📍 Trigger log</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:12px">What caused the urge? Spotting patterns helps you break them.</p>
@@ -309,20 +256,14 @@
     <button class="btn btn-primary btn-sm" onclick="saveTrigger()">Log trigger</button>
     <div id="trigger-list" style="margin-top:12px"></div>
   </div>
-  <!-- Replacement habits -->
   <div class="card">
     <div class="card-title">🔄 Replacement habits</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:12px">Link a bad habit to a good one. When urge hits, do this instead.</p>
     <div id="replacement-list">
-      <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:var(--bg);margin-bottom:8px;font-size:13px">
-        <span>🚬 Smoke cigarettes</span><span style="color:var(--text3)">→</span><span style="color:var(--success)">🧘 Deep breathing</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:var(--bg);margin-bottom:8px;font-size:13px">
-        <span>📱 Social media</span><span style="color:var(--text3)">→</span><span style="color:var(--success)">📚 Read a page</span>
-      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:var(--bg);margin-bottom:8px;font-size:13px"><span>🚬 Smoke cigarettes</span><span style="color:var(--text3)">→</span><span style="color:var(--success)">🧘 Deep breathing</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:var(--bg);margin-bottom:8px;font-size:13px"><span>📱 Social media</span><span style="color:var(--text3)">→</span><span style="color:var(--success)">📚 Read a page</span></div>
     </div>
   </div>
-  <!-- Why I quit -->
   <div class="card">
     <div class="card-title">❤️ Why I quit</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:12px">Your reason appears whenever you're about to break a habit.</p>
@@ -332,58 +273,48 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div class="modal-bg" id="modal" style="display:none" onclick="bgClose(event)">
   <div class="modal" id="modal-inner" onclick="event.stopPropagation()"></div>
 </div>
-
-<!-- Toast -->
 <div class="toast" id="toast"></div>
 
 <script>
-// ─── DEFAULT DATA ────────────────────────────────────────────────────────────
 const DEFAULT = {
   habits: [
-    {id:1,name:'Morning meditation',type:'do',category:'Mindfulness',points:10,difficulty:'Medium',frequency:'daily',reminder:'07:00',streak:5,graceDays:0,active:true,whyQuit:'', historyPoints: 50},
-    {id:2,name:'Exercise 30 min',type:'do',category:'Fitness',points:15,difficulty:'Hard',frequency:'daily',reminder:'',streak:12,graceDays:0,active:true,whyQuit:'', historyPoints: 180},
-    {id:3,name:'Read 20 pages',type:'do',category:'Personal',points:8,difficulty:'Easy',frequency:'daily',reminder:'21:00',streak:3,graceDays:0,active:true,whyQuit:'', historyPoints: 24},
-    {id:4,name:'Smoke cigarettes',type:'dont',category:'Health',points:20,difficulty:'Hard',frequency:'daily',reminder:'',streak:7,graceDays:0,active:true,whyQuit:'For my health and family.', historyPoints: 140},
-    {id:5,name:'Social media > 1h',type:'dont',category:'Personal',points:12,difficulty:'Medium',frequency:'daily',reminder:'',streak:2,graceDays:1,active:true,whyQuit:'', historyPoints: 24},
+    {id:1,name:'Morning meditation',type:'do',category:'Mindfulness',points:10,difficulty:'Medium',frequency:'daily',reminder:'07:00',streak:5,graceDays:0,active:true,whyQuit:'',historyPoints:50},
+    {id:2,name:'Exercise 30 min',type:'do',category:'Fitness',points:15,difficulty:'Hard',frequency:'daily',reminder:'',streak:12,graceDays:0,active:true,whyQuit:'',historyPoints:180},
+    {id:3,name:'Read 20 pages',type:'do',category:'Personal',points:8,difficulty:'Easy',frequency:'daily',reminder:'21:00',streak:3,graceDays:0,active:true,whyQuit:'',historyPoints:24},
+    {id:4,name:'Smoke cigarettes',type:'dont',category:'Health',points:20,difficulty:'Hard',frequency:'daily',reminder:'',streak:7,graceDays:0,active:true,whyQuit:'For my health and family.',historyPoints:140},
+    {id:5,name:'Social media > 1h',type:'dont',category:'Personal',points:12,difficulty:'Medium',frequency:'daily',reminder:'',streak:2,graceDays:1,active:true,whyQuit:'',historyPoints:24},
   ],
   rewards: [
-    {id:1,name:'Movie night',emoji:'🎬',points:100,redeemed:false, scope:'all', habitIds:[]},
-    {id:2,name:'New book',emoji:'📚',points:200,redeemed:false, scope:'all', habitIds:[]},
-    {id:3,name:'Weekend trip',emoji:'✈️',points:500,redeemed:false, scope:'all', habitIds:[]},
+    {id:1,name:'Movie night',emoji:'🎬',points:100,redeemed:false,scope:'all',habitIds:[]},
+    {id:2,name:'New book',emoji:'📚',points:200,redeemed:false,scope:'all',habitIds:[]},
+    {id:3,name:'Weekend trip',emoji:'✈️',points:500,redeemed:false,scope:'all',habitIds:[]},
   ],
-  todayLog: {c1:true,c3:true},
-  totalPoints: 347,
-  urges: [{time:'09:15',habit:'Smoke cigarettes',resisted:true},{time:'14:30',habit:'Social media',resisted:true}],
-  triggers: [{t:'Stress',time:'09:15'},{t:'Boredom',time:'14:30'}],
-  whyQuit: '',
-  weekData: [82,67,91,74,88,95,78],
-  monthData: [71,75,80,83,77,85,90,82,88,79,84,88,76,81,85,90,78,82,88,91,85,79,83,87,92,80,85,88,90,83],
-  nextId: 10
+  todayLog:{c1:true,c3:true},
+  totalPoints:347,
+  urges:[{time:'09:15',habit:'Smoke cigarettes',resisted:true},{time:'14:30',habit:'Social media',resisted:true}],
+  triggers:[{t:'Stress',time:'09:15'},{t:'Boredom',time:'14:30'}],
+  whyQuit:'',
+  weekData:[82,67,91,74,88,95,78],
+  monthData:[71,75,80,83,77,85,90,82,88,79,84,88,76,81,85,90,78,82,88,91,85,79,83,87,92,80,85,88,90,83],
+  nextId:10
 };
 
-// ─── STORAGE ─────────────────────────────────────────────────────────────────
 function load() {
-  try { 
+  try {
     let parsed = JSON.parse(localStorage.getItem('habitflow_v1'));
     if(!parsed) return JSON.parse(JSON.stringify(DEFAULT));
-    parsed.habits.forEach(h => { if(h.historyPoints === undefined) h.historyPoints = 0; });
-    parsed.rewards.forEach(r => {
-      if(r.scope === undefined) r.scope = 'all';
-      if(r.habitIds === undefined) r.habitIds = [];
-    });
+    parsed.habits.forEach(h => { if(h.historyPoints===undefined) h.historyPoints=0; });
+    parsed.rewards.forEach(r => { if(r.scope===undefined) r.scope='all'; if(r.habitIds===undefined) r.habitIds=[]; });
     return parsed;
-  }
-  catch(e) { return JSON.parse(JSON.stringify(DEFAULT)); }
+  } catch(e) { return JSON.parse(JSON.stringify(DEFAULT)); }
 }
 function save() { try { localStorage.setItem('habitflow_v1', JSON.stringify(state)); } catch(e){} }
 
 let state = load();
 
-// ─── HELPERS ─────────────────────────────────────────────────────────────────
 const CATS = ['Health','Work','Finance','Personal','Fitness','Mindfulness','Social','Education'];
 const DIFFS = [{l:'Easy',m:1},{l:'Medium',m:1.5},{l:'Hard',m:2}];
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -394,34 +325,29 @@ function diffMult(d) { return DIFFS.find(x=>x.l===d)?.m||1; }
 function calcPts(h) { return Math.round(h.points * diffMult(h.difficulty) * streakMult(h.streak)); }
 
 function efficiency() {
-  const dos = state.habits.filter(h=>h.active);
-  const donts = state.habits.filter(h=>h.type==='dont'&&h.active);
   const doActive = state.habits.filter(h=>h.type==='do'&&h.active);
+  const donts = state.habits.filter(h=>h.type==='dont'&&h.active);
   const doScore = doActive.length ? Math.round(doActive.filter(h=>state.todayLog['c'+h.id]).length/doActive.length*100) : 100;
   const dontScore = donts.length ? Math.round(donts.filter(h=>!state.todayLog['b'+h.id]).length/donts.length*100) : 100;
-  const overall = Math.round((doScore*0.5)+(dontScore*0.5));
-  return {doScore,dontScore,overall};
+  return {doScore, dontScore, overall: Math.round((doScore*0.5)+(dontScore*0.5))};
 }
 
 function now() { const d=new Date(); return d.getHours()+':'+String(d.getMinutes()).padStart(2,'0'); }
 
 function getRewardScopePoints(r) {
-  if (r.scope === 'all') {
-    return state.totalPoints;
-  }
-  return r.habitIds.reduce((sum, hId) => {
-    const targetHabit = state.habits.find(h => h.id === Number(hId));
-    return sum + (targetHabit ? (targetHabit.historyPoints || 0) : 0);
+  if(r.scope==='all') return state.totalPoints;
+  return r.habitIds.reduce((sum,hId) => {
+    const h = state.habits.find(x=>x.id===Number(hId));
+    return sum + (h ? (h.historyPoints||0) : 0);
   }, 0);
 }
 
-// ─── NAVIGATION ──────────────────────────────────────────────────────────────
 let currentTab = 'daily';
 function showPage(p) {
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  if (event && event.currentTarget) event.currentTarget.classList.add('active');
+  if(event&&event.currentTarget) event.currentTarget.classList.add('active');
   if(p==='dashboard') renderDashboard();
   if(p==='habits') renderHabits();
   if(p==='rewards') renderRewards();
@@ -431,22 +357,18 @@ function showPage(p) {
 }
 function updateTopPts() { document.getElementById('top-pts').textContent='⭐ '+state.totalPoints+' pts'; }
 
-// ─── DASHBOARD ───────────────────────────────────────────────────────────────
 function renderDashboard() {
   updateTopPts();
   const eff = efficiency();
   const active = state.habits.filter(h=>h.active);
   const done = active.filter(h=>h.type==='do'?state.todayLog['c'+h.id]:!state.todayLog['b'+h.id]);
-  const best = state.habits.reduce((a,b)=>a.streak>b.streak?a:b, {streak:0});
-
+  const best = state.habits.reduce((a,b)=>a.streak>b.streak?a:b,{streak:0,name:'—'});
   document.getElementById('dash-metrics').innerHTML = `
     <div class="metric purple"><div class="val">${state.totalPoints}</div><div class="lbl">Total points</div></div>
     <div class="metric green"><div class="val">${done.length}/${active.length}</div><div class="lbl">On track today</div></div>
     <div class="metric orange"><div class="val">${best.streak||0}</div><div class="lbl">Best streak</div></div>
-    <div class="metric"><div class="val">${state.habits.filter(h=>h.active).length}</div><div class="lbl">Active habits</div></div>
+    <div class="metric"><div class="val">${active.length}</div><div class="lbl">Active habits</div></div>
   `;
-
-  // Efficiency ring
   const circ = 2*Math.PI*34;
   document.getElementById('eff-section').innerHTML = `
     <div class="ring-wrap">
@@ -464,24 +386,19 @@ function renderDashboard() {
       <div class="prog-wrap"><div class="prog-fill" style="width:${eff.dontScore}%;background:var(--danger)"></div></div>
     </div>
   `;
-
   document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-IN',{weekday:'long',month:'short',day:'numeric'});
-
   const daily = state.habits.filter(h=>h.active&&h.frequency==='daily');
   const todayEl = document.getElementById('today-habits');
-  if(!daily.length) { todayEl.innerHTML='<div class="empty"><div class="empty-icon">📋</div>No daily habits. Add one!</div>'; }
+  if(!daily.length) { todayEl.innerHTML='<div class="empty"><div class="empty-icon">📋</div>No daily habits yet.</div>'; }
   else {
     todayEl.innerHTML = daily.map(h=>{
-      const isDo = h.type==='do';
-      const done = isDo ? !!state.todayLog['c'+h.id] : !state.todayLog['b'+h.id];
-      const pts = calcPts(h);
-      const sm = streakMult(h.streak);
+      const isDo=h.type==='do';
+      const isDone=isDo?!!state.todayLog['c'+h.id]:!state.todayLog['b'+h.id];
+      const pts=calcPts(h); const sm=streakMult(h.streak);
       return `<div class="habit-item">
-        <div class="habit-check ${done?'done':''}" onclick="toggleHabit(${h.id})" title="${isDo?(done?'Unmark':'Mark done'):(done?'Mark broken':'Still holding')}">
-          ${done?'✓':''}
-        </div>
+        <div class="habit-check ${isDone?'done':''}" onclick="toggleHabit(${h.id})">${isDone?'✓':''}</div>
         <div style="flex:1;min-width:0">
-          <div class="habit-name" style="${done?'text-decoration:line-through;opacity:.6':''}">${h.name}</div>
+          <div class="habit-name" style="${isDone?'text-decoration:line-through;opacity:.6':''}">${h.name}</div>
           <div class="habit-meta">
             <span class="badge ${isDo?'b-do':'b-dont'}">${isDo?'Do':"Don't"}</span>
             <span class="badge b-cat">${h.category}</span>
@@ -495,66 +412,57 @@ function renderDashboard() {
       </div>`;
     }).join('');
   }
-
-  // Insights
   const top = state.habits.reduce((a,b)=>a.streak>b.streak?a:b,{name:'—',streak:0});
-  const nextR = state.rewards.filter(r=>!r.redeemed).sort((a,b)=>a.points-getRewardScopePoints(r))[0];
-  let rewardInsightStr = '';
+  const nextR = state.rewards.filter(r=>!r.redeemed).sort((a,b)=>(a.points-getRewardScopePoints(a))-(b.points-getRewardScopePoints(b)))[0];
+  let rewardInsight = '';
   if(nextR) {
     const needed = Math.max(0, nextR.points - getRewardScopePoints(nextR));
-    rewardInsightStr = `<div class="insight"><div class="insight-icon">🎯</div><div class="insight-text">Only <strong>${needed} pts</strong> away from <strong>${nextR.name}</strong>${nextR.scope==='custom'?' (scoped habits)':''}!</div></div>`;
+    rewardInsight = `<div class="insight"><div class="insight-icon">🎯</div><div class="insight-text">Only <strong>${needed} pts</strong> away from <strong>${nextR.name}</strong>${nextR.scope==='custom'?' (scoped habits)':''}!</div></div>`;
   }
-
   document.getElementById('insights').innerHTML = `
-    <div class="insight"><div class="insight-icon">🏆</div><div class="insight-text">Longest streak: <strong>${top.name}</strong> at ${top.streak} days. Keep it up!</div></div>
-    ${rewardInsightStr}
-    <div class="insight"><div class="insight-icon">📈</div><div class="insight-text">Overall efficiency this week: <strong>${Math.round(state.weekData.reduce((a,b)=>a+b,0)/state.weekData.length)}%</strong></div></div>
+    <div class="insight"><div class="insight-icon">🏆</div><div class="insight-text">Longest streak: <strong>${top.name}</strong> at ${top.streak} days!</div></div>
+    ${rewardInsight}
+    <div class="insight"><div class="insight-icon">📈</div><div class="insight-text">Weekly avg efficiency: <strong>${Math.round(state.weekData.reduce((a,b)=>a+b,0)/7)}%</strong></div></div>
   `;
 }
 
-// ─── TOGGLE HABIT ────────────────────────────────────────────────────────────
 function toggleHabit(id) {
   const h = state.habits.find(x=>x.id===id); if(!h) return;
   if(h.type==='do') {
-    if(state.todayLog['c'+id]) { 
-      delete state.todayLog['c'+id]; 
+    if(state.todayLog['c'+id]) {
+      delete state.todayLog['c'+id];
       const p=calcPts(h);
-      state.totalPoints=Math.max(0,state.totalPoints-p); 
-      h.streak=Math.max(0,h.streak-1); 
-      h.historyPoints=Math.max(0, (h.historyPoints || 0) - p);
+      state.totalPoints=Math.max(0,state.totalPoints-p);
+      h.streak=Math.max(0,h.streak-1);
+      h.historyPoints=Math.max(0,(h.historyPoints||0)-p);
       showToast('Marked incomplete.');
-    }
-    else { 
-      state.todayLog['c'+id]=true; 
-      const p=calcPts(h); 
-      state.totalPoints+=p; 
-      h.streak++; 
-      h.historyPoints=(h.historyPoints || 0) + p;
-      showToast('✅ +'+p+' pts earned! Streak: '+h.streak+'d','success'); 
+    } else {
+      state.todayLog['c'+id]=true;
+      const p=calcPts(h);
+      state.totalPoints+=p; h.streak++;
+      h.historyPoints=(h.historyPoints||0)+p;
+      showToast('✅ +'+p+' pts! Streak: '+h.streak+'d','success');
     }
   } else {
-    if(state.todayLog['b'+id]) { 
-      delete state.todayLog['b'+id]; 
-      h.streak++; 
-      showToast('Good — back on track! 💪','success'); 
-    }
-    else {
+    if(state.todayLog['b'+id]) {
+      delete state.todayLog['b'+id]; h.streak++;
+      showToast('Back on track! 💪','success');
+    } else {
       state.todayLog['b'+id]=true;
       const pen=Math.round(h.points*diffMult(h.difficulty)*0.5);
-      state.totalPoints=Math.max(0,state.totalPoints-pen); 
-      h.streak=Math.max(0,h.streak-1); 
-      h.historyPoints=Math.max(0, (h.historyPoints || 0) - pen);
+      state.totalPoints=Math.max(0,state.totalPoints-pen);
+      h.streak=Math.max(0,h.streak-1);
+      h.historyPoints=Math.max(0,(h.historyPoints||0)-pen);
       if(h.whyQuit) showToast('Remember: '+h.whyQuit,'warn');
-      else showToast('Habit broken. -'+pen+' pts. You can recover! 💪','warn');
+      else showToast('Habit broken. -'+pen+' pts. Recover! 💪','warn');
     }
   }
   save(); renderDashboard();
 }
 
-// ─── HABITS PAGE ─────────────────────────────────────────────────────────────
 function renderHabits() {
   const el = document.getElementById('habit-list');
-  if(!state.habits.length) { el.innerHTML='<div class="empty"><div class="empty-icon">🌱</div>No habits yet. Add your first!</div>'; return; }
+  if(!state.habits.length) { el.innerHTML='<div class="empty"><div class="empty-icon">🌱</div>No habits yet.</div>'; return; }
   el.innerHTML = state.habits.map(h=>`
     <div class="habit-item">
       <div style="width:12px;height:12px;border-radius:50%;background:${h.active?'var(--success)':'var(--border)'};flex-shrink:0;margin-top:2px"></div>
@@ -564,7 +472,7 @@ function renderHabits() {
           <span class="badge ${h.type==='do'?'b-do':'b-dont'}">${h.type==='do'?'Do':"Don't"}</span>
           <span class="badge b-cat">${h.category}</span>
           <span class="badge b-diff-${h.difficulty.toLowerCase()}">${h.difficulty}</span>
-          <span class="badge" style="background:var(--primary-light);color:var(--primary-dark)">Earned: ${h.historyPoints || 0}xp</span>
+          <span class="badge" style="background:var(--primary-light);color:var(--primary-dark)">⭐ ${h.historyPoints||0} earned</span>
         </div>
         <div style="font-size:11px;color:var(--text3);margin-top:5px">
           ${h.points}pts base · 🔥 ${h.streak}d streak${h.reminder?' · ⏰ '+h.reminder:''}
@@ -579,27 +487,20 @@ function renderHabits() {
 }
 
 function deleteHabit(id) {
-  if(!confirm('Delete this habit? This will subtract its earned history points from your overall points and any unredeemed rewards linked to it.')) return;
-  const h = state.habits.find(x => x.id === id);
-  if (h) {
-    const ptsToRemove = h.historyPoints || 0;
-    state.totalPoints = Math.max(0, state.totalPoints - ptsToRemove);
-    
+  if(!confirm('Delete this habit? Its earned points will be removed from your total and any unredeemed scoped rewards.')) return;
+  const h = state.habits.find(x=>x.id===id);
+  if(h) {
+    state.totalPoints = Math.max(0, state.totalPoints - (h.historyPoints||0));
     state.rewards.forEach(r => {
-      if (!r.redeemed && r.scope === 'custom') {
-        r.habitIds = r.habitIds.filter(hid => Number(hid) !== id);
-      }
+      if(!r.redeemed && r.scope==='custom') r.habitIds = r.habitIds.filter(hid=>Number(hid)!==id);
     });
   }
-  
   delete state.todayLog['c'+id];
   delete state.todayLog['b'+id];
-  
   state.habits = state.habits.filter(h=>h.id!==id);
-  save(); renderHabits(); showToast('Habit deleted.');
+  save(); renderHabits(); updateTopPts(); showToast('Habit deleted.');
 }
 
-// ─── ADD / EDIT HABIT MODAL ───────────────────────────────────────────────────
 function openAddHabit(h={}) {
   const edit = !!h.id;
   openModal(`
@@ -607,7 +508,7 @@ function openAddHabit(h={}) {
     <div class="form-group"><label>Habit name</label><input type="text" id="h-name" value="${h.name||''}" placeholder="e.g. Morning run"></div>
     <div class="form-grid">
       <div class="form-group"><label>Type</label><select id="h-type">
-        <option value="do" ${h.type==='do'?'selected':''}>✅ Do</option>
+        <option value="do" ${h.type==='do'||!h.type?'selected':''}>✅ Do</option>
         <option value="dont" ${h.type==='dont'?'selected':''}>🚫 Don't do</option>
       </select></div>
       <div class="form-group"><label>Category</label><select id="h-cat">${CATS.map(c=>`<option ${c===(h.category||'Health')?'selected':''}>${c}</option>`).join('')}</select></div>
@@ -623,7 +524,7 @@ function openAddHabit(h={}) {
       </select></div>
       <div class="form-group"><label>Reminder time</label><input type="time" id="h-reminder" value="${h.reminder||''}"></div>
     </div>
-    <div class="form-group"><label>Why quitting? (for Don't habits)</label><input type="text" id="h-why" value="${h.whyQuit||''}" placeholder="Your motivation…"></div>
+    <div class="form-group"><label>Why quitting? (Don't habits)</label><input type="text" id="h-why" value="${h.whyQuit||''}" placeholder="Your motivation…"></div>
     <div class="modal-foot">
       <button class="btn" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="${edit?'updateHabit('+h.id+')':'saveHabit()'}">${edit?'Save changes':'Add habit'}</button>
@@ -632,93 +533,77 @@ function openAddHabit(h={}) {
 }
 
 function saveHabit() {
-  const name = document.getElementById('h-name').value.trim();
-  if(!name) { showToast('Please enter a habit name.','warn'); return; }
-  state.habits.push({
-    id: state.nextId++, name, type: document.getElementById('h-type').value,
-    category: document.getElementById('h-cat').value, difficulty: document.getElementById('h-diff').value,
-    points: parseInt(document.getElementById('h-pts').value)||10,
-    frequency: document.getElementById('h-freq').value, reminder: document.getElementById('h-reminder').value,
-    streak: 0, graceDays: 0, active: true, whyQuit: document.getElementById('h-why').value,
-    historyPoints: 0
-  });
-  save(); closeModal(); renderHabits(); showToast('Habit added! 🌱','success');
+  const name=document.getElementById('h-name').value.trim();
+  if(!name){showToast('Enter a habit name.','warn');return;}
+  state.habits.push({id:state.nextId++,name,type:document.getElementById('h-type').value,category:document.getElementById('h-cat').value,difficulty:document.getElementById('h-diff').value,points:parseInt(document.getElementById('h-pts').value)||10,frequency:document.getElementById('h-freq').value,reminder:document.getElementById('h-reminder').value,streak:0,graceDays:0,active:true,whyQuit:document.getElementById('h-why').value,historyPoints:0});
+  save();closeModal();renderHabits();showToast('Habit added! 🌱','success');
 }
 
 function editHabit(id) { openAddHabit(state.habits.find(h=>h.id===id)||{}); }
 
 function updateHabit(id) {
-  const h = state.habits.find(x=>x.id===id); if(!h) return;
-  const name = document.getElementById('h-name').value.trim();
-  if(!name) { showToast('Please enter a habit name.','warn'); return; }
-  h.name=name; h.type=document.getElementById('h-type').value; h.category=document.getElementById('h-cat').value;
-  h.difficulty=document.getElementById('h-diff').value; h.points=parseInt(document.getElementById('h-pts').value)||h.points;
-  h.frequency=document.getElementById('h-freq').value; h.reminder=document.getElementById('h-reminder').value;
-  h.whyQuit=document.getElementById('h-why').value;
-  save(); closeModal(); renderHabits(); showToast('Habit updated! ✅','success');
+  const h=state.habits.find(x=>x.id===id);if(!h)return;
+  const name=document.getElementById('h-name').value.trim();if(!name){showToast('Enter a habit name.','warn');return;}
+  h.name=name;h.type=document.getElementById('h-type').value;h.category=document.getElementById('h-cat').value;
+  h.difficulty=document.getElementById('h-diff').value;h.points=parseInt(document.getElementById('h-pts').value)||h.points;
+  h.frequency=document.getElementById('h-freq').value;h.reminder=document.getElementById('h-reminder').value;h.whyQuit=document.getElementById('h-why').value;
+  save();closeModal();renderHabits();showToast('Habit updated! ✅','success');
 }
 
-// ─── REWARDS ─────────────────────────────────────────────────────────────────
 function renderRewards() {
   updateTopPts();
   document.getElementById('reward-pts-big').textContent = state.totalPoints;
   const el = document.getElementById('reward-list');
-  if(!state.rewards.length) { el.innerHTML='<div class="empty"><div class="empty-icon">🎁</div>No rewards yet. Add one!</div>'; return; }
+  if(!state.rewards.length){el.innerHTML='<div class="empty"><div class="empty-icon">🎁</div>No rewards yet.</div>';return;}
   el.innerHTML = state.rewards.map(r=>{
     const currentScopePts = getRewardScopePoints(r);
-    const pct = Math.min(100, Math.round(currentScopePts/r.points*100));
+    const pct = Math.min(100,Math.round(currentScopePts/r.points*100));
     const unlocked = currentScopePts>=r.points;
-    
-    let scopeBadge = `<span class="badge b-cat">All Habits Eligible</span>`;
-    if (r.scope === 'custom') {
-      scopeBadge = `<span class="badge" style="background:var(--warning-light);color:#B45309">${r.habitIds.length} Linked Habit(s)</span>`;
-    }
-
+    let scopeBadge = `<span class="badge b-cat">All Habits</span>`;
+    if(r.scope==='custom') scopeBadge = `<span class="badge" style="background:var(--warning-light);color:#B45309">${r.habitIds.length} Habit(s)</span>`;
     return `<div class="reward-item">
       <div class="reward-emoji">${r.emoji}</div>
       <div class="reward-info">
         <div class="reward-name">${r.name} ${scopeBadge}</div>
-        <div class="reward-pts">${r.points} pts required (${currentScopePts} accumulated)</div>
+        <div class="reward-pts">${r.points} pts required · <strong style="color:var(--primary)">${currentScopePts} accumulated</strong></div>
         <div class="prog-wrap"><div class="prog-fill ${unlocked?'full':''}" style="width:${pct}%"></div></div>
         <div style="font-size:11px;color:var(--text3)">${pct}% · ${Math.max(0,r.points-currentScopePts)} pts to go</div>
       </div>
-      ${unlocked&&!r.redeemed
-        ?`<button class="btn btn-success btn-sm" onclick="redeemReward(${r.id})">Redeem</button>`
-        :r.redeemed
-          ?`<span style="font-size:22px">✅</span>`
-          :`<span style="font-size:11px;color:var(--text3);text-align:center">${r.points-currentScopePts}<br>pts left</span>`}
+      <div class="reward-actions">
+        ${unlocked&&!r.redeemed
+          ?`<button class="btn btn-success btn-sm" onclick="redeemReward(${r.id})">Redeem</button>`
+          :r.redeemed
+            ?`<span style="font-size:22px">✅</span>`
+            :`<span style="font-size:11px;color:var(--text3);text-align:center">${r.points-currentScopePts}<br>pts left</span>`}
+        <button class="btn btn-sm" onclick="deleteReward(${r.id})" style="color:var(--danger);border-color:var(--danger);background:var(--danger-light)">🗑️ Delete</button>
+      </div>
     </div>`;
   }).join('');
 }
 
 function redeemReward(id) {
-  const r = state.rewards.find(x=>x.id===id);
-  if(r && getRewardScopePoints(r)>=r.points) { 
-    r.redeemed=true; 
-    state.totalPoints=Math.max(0, state.totalPoints-r.points); 
-    save(); renderRewards(); showToast('🎉 '+r.name+' redeemed! Enjoy!','success'); 
-  }
+  const r=state.rewards.find(x=>x.id===id);
+  if(r&&getRewardScopePoints(r)>=r.points){r.redeemed=true;state.totalPoints=Math.max(0,state.totalPoints-r.points);save();renderRewards();showToast('🎉 '+r.name+' redeemed!','success');}
+}
+
+function deleteReward(id) {
+  if(!confirm('Delete this reward?')) return;
+  state.rewards = state.rewards.filter(x=>x.id!==id);
+  save(); renderRewards(); showToast('Reward deleted.');
 }
 
 function handleRewardScopeToggle() {
   const scopeVal = document.getElementById('r-scope').value;
-  const listContainer = document.getElementById('r-habit-checklist-wrap');
-  if(scopeVal === 'custom') {
-    listContainer.style.display = 'block';
-  } else {
-    listContainer.style.display = 'none';
-  }
+  document.getElementById('r-habit-checklist-wrap').style.display = scopeVal==='custom' ? 'block' : 'none';
 }
 
-// ─── MODALS ──────────────────────────────────────────────────────────────────
 function openAddReward() {
-  const checkboxesHtml = state.habits.map(h => `
+  const checkboxesHtml = state.habits.map(h=>`
     <label class="checklist-item">
       <input type="checkbox" name="reward-habits" value="${h.id}">
-      <span>${h.name} <small style="color:var(--text2)">(${h.historyPoints || 0} pts built-in)</small></span>
+      <span>${h.name} <small style="color:var(--text2)">(${h.historyPoints||0} pts earned)</small></span>
     </label>
   `).join('');
-
   openModal(`
     <div class="modal-title">Add reward</div>
     <div class="form-group"><label>Reward name</label><input type="text" id="r-name" placeholder="e.g. Movie night"></div>
@@ -727,16 +612,16 @@ function openAddReward() {
       <div class="form-group"><label>Points required</label><input type="number" id="r-pts" value="100" min="1"></div>
     </div>
     <div class="form-group">
-      <label>Habits Scope</label>
+      <label>Which habits count?</label>
       <select id="r-scope" onchange="handleRewardScopeToggle()">
-        <option value="all">All Habits (Default Dynamic Mode)</option>
-        <option value="custom">Only Specific Habits</option>
+        <option value="all">🌐 All habits</option>
+        <option value="custom">🎯 Specific habits only</option>
       </select>
     </div>
     <div class="form-group" id="r-habit-checklist-wrap" style="display:none;">
-      <label>Select Contributing Habits</label>
+      <label>Select contributing habits</label>
       <div class="habit-checklist-container">
-        ${checkboxesHtml || '<p style="font-size:12px;color:var(--text3);padding:8px;">No habits created yet.</p>'}
+        ${checkboxesHtml||'<p style="font-size:12px;color:var(--text3);padding:8px;">No habits yet.</p>'}
       </div>
     </div>
     <div class="modal-foot">
@@ -747,33 +632,18 @@ function openAddReward() {
 }
 
 function saveReward() {
-  const name = document.getElementById('r-name').value.trim();
-  if(!name) { showToast('Enter a reward name.','warn'); return; }
-  
-  const scope = document.getElementById('r-scope').value;
-  let habitIds = [];
-  if (scope === 'custom') {
-    const checkedBoxes = document.querySelectorAll('input[name="reward-habits"]:checked');
-    checkedBoxes.forEach(cb => habitIds.push(cb.value));
-    if(habitIds.length === 0) {
-      showToast('Please select at least one habit for custom scope mode.', 'warn');
-      return;
-    }
+  const name=document.getElementById('r-name').value.trim();
+  if(!name){showToast('Enter a reward name.','warn');return;}
+  const scope=document.getElementById('r-scope').value;
+  let habitIds=[];
+  if(scope==='custom'){
+    document.querySelectorAll('input[name="reward-habits"]:checked').forEach(cb=>habitIds.push(cb.value));
+    if(habitIds.length===0){showToast('Select at least one habit.','warn');return;}
   }
-
-  state.rewards.push({ 
-    id:state.nextId++, 
-    name, 
-    emoji:document.getElementById('r-emoji').value||'🎁', 
-    points:parseInt(document.getElementById('r-pts').value)||100, 
-    redeemed:false,
-    scope,
-    habitIds
-  });
-  save(); closeModal(); renderRewards(); showToast('Reward added! 🎁','success');
+  state.rewards.push({id:state.nextId++,name,emoji:document.getElementById('r-emoji').value||'🎁',points:parseInt(document.getElementById('r-pts').value)||100,redeemed:false,scope,habitIds});
+  save();closeModal();renderRewards();showToast('Reward added! 🎁','success');
 }
 
-// ─── REPORTS ─────────────────────────────────────────────────────────────────
 function switchTab(t,btn) {
   currentTab=t;
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
@@ -782,180 +652,116 @@ function switchTab(t,btn) {
 }
 
 function renderReport(t) {
-  const el = document.getElementById('report-content');
-  const eff = efficiency();
-  if(t==='daily') {
-    el.innerHTML = `
+  const el=document.getElementById('report-content');
+  const eff=efficiency();
+  if(t==='daily'){
+    el.innerHTML=`
       <div class="metric-grid cols3">
         <div class="metric green"><div class="val">${eff.overall}%</div><div class="lbl">Efficiency</div></div>
         <div class="metric purple"><div class="val">${eff.doScore}%</div><div class="lbl">Do score</div></div>
         <div class="metric red"><div class="val">${eff.dontScore}%</div><div class="lbl">Don't score</div></div>
       </div>
       <div class="card"><div class="card-title">Today's breakdown</div>
-        ${state.habits.filter(h=>h.active).map(h=>{
-          const ok=h.type==='do'?!!state.todayLog['c'+h.id]:!state.todayLog['b'+h.id];
-          return`<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px">
-            <span>${h.name}</span>
-            <span style="font-weight:600;color:${ok?'var(--success)':'var(--danger)'}">${ok?'✓ On track':'✗ Missed'}</span>
-          </div>`;
-        }).join('')}
+        ${state.habits.filter(h=>h.active).map(h=>{const ok=h.type==='do'?!!state.todayLog['c'+h.id]:!state.todayLog['b'+h.id];return`<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px"><span>${h.name}</span><span style="font-weight:600;color:${ok?'var(--success)':'var(--danger)'}">${ok?'✓ On track':'✗ Missed'}</span></div>`;}).join('')}
       </div>`;
-  } else if(t==='weekly') {
-    const avg = Math.round(state.weekData.reduce((a,b)=>a+b,0)/state.weekData.length);
-    el.innerHTML = `
+  } else if(t==='weekly'){
+    const avg=Math.round(state.weekData.reduce((a,b)=>a+b,0)/7);
+    el.innerHTML=`
       <div class="metric-grid cols3">
         <div class="metric green"><div class="val">${avg}%</div><div class="lbl">Avg efficiency</div></div>
         <div class="metric purple"><div class="val">${Math.max(...state.weekData)}%</div><div class="lbl">Best day</div></div>
         <div class="metric red"><div class="val">${Math.min(...state.weekData)}%</div><div class="lbl">Worst day</div></div>
       </div>
       <div class="card"><div class="card-title">Daily efficiency this week</div>
-        ${state.weekData.map((v,i)=>`<div class="bar-row">
-          <div class="bar-lbl">${DAYS[i]}</div>
-          <div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=85?'var(--success)':v>=70?'var(--primary)':'var(--danger)'}"></div></div>
-          <div class="bar-val">${v}%</div>
-        </div>`).join('')}
+        ${state.weekData.map((v,i)=>`<div class="bar-row"><div class="bar-lbl">${DAYS[i]}</div><div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=85?'var(--success)':v>=70?'var(--primary)':'var(--danger)'}"></div></div><div class="bar-val">${v}%</div></div>`).join('')}
       </div>`;
-  } else if(t==='monthly') {
-    const avg = Math.round(state.monthData.reduce((a,b)=>a+b,0)/state.monthData.length);
-    el.innerHTML = `
+  } else if(t==='monthly'){
+    const avg=Math.round(state.monthData.reduce((a,b)=>a+b,0)/30);
+    el.innerHTML=`
       <div class="metric-grid cols3">
         <div class="metric green"><div class="val">${avg}%</div><div class="lbl">Monthly avg</div></div>
         <div class="metric purple"><div class="val">${Math.max(...state.monthData)}%</div><div class="lbl">Peak day</div></div>
-        <div class="metric orange"><div class="val">${state.habits.reduce((a,b)=>a+b.streak,0)}</div><div class="lbl">Total streak days</div></div>
+        <div class="metric orange"><div class="val">${state.habits.reduce((a,b)=>a+(b.streak||0),0)}</div><div class="lbl">Total streak days</div></div>
       </div>
       <div class="card"><div class="card-title">30-day efficiency trend</div>
-        ${state.monthData.map((v,i)=>`<div class="bar-row">
-          <div class="bar-lbl" style="width:20px">${i+1}</div>
-          <div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=85?'var(--success)':v>=70?'var(--primary)':'var(--danger)'}"></div></div>
-          <div class="bar-val">${v}%</div>
-        </div>`).join('')}
+        ${state.monthData.map((v,i)=>`<div class="bar-row"><div class="bar-lbl" style="width:20px">${i+1}</div><div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=85?'var(--success)':v>=70?'var(--primary)':'var(--danger)'}"></div></div><div class="bar-val">${v}%</div></div>`).join('')}
       </div>`;
   } else {
-    const yearData = MONTHS.map((m,i)=>({m,v:55+Math.round(Math.sin(i*0.8)*18+Math.cos(i*0.5)*10+20)}));
-    const yavg = Math.round(yearData.reduce((a,b)=>a+b.v,0)/12);
-    el.innerHTML = `
+    const yearData=(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']).map((m,i)=>({m,v:55+Math.round(Math.sin(i*0.8)*18+Math.cos(i*0.5)*10+20)}));
+    const yavg=Math.round(yearData.reduce((a,b)=>a+b.v,0)/12);
+    el.innerHTML=`
       <div class="metric-grid">
         <div class="metric green"><div class="val">${yavg}%</div><div class="lbl">Yearly avg</div></div>
         <div class="metric purple"><div class="val">${state.totalPoints}</div><div class="lbl">Points earned</div></div>
-        <div class="metric orange"><div class="val">${state.rewards.filter(r=>r.redeemed).length}</div><div class="lbl">Rewards redeemed</div></div>
-        <div class="metric"><div class="val">${state.habits.length}</div><div class="lbl">Habits tracked</div></div>
+        <div class="metric orange"><div class="val">${state.rewards.filter(r=>r.redeemed).length}</div><div class="lbl">Redeemed</div></div>
+        <div class="metric"><div class="val">${state.habits.length}</div><div class="lbl">Habits</div></div>
       </div>
       <div class="card"><div class="card-title">Monthly overview</div>
-        ${yearData.map(({m,v})=>`<div class="bar-row">
-          <div class="bar-lbl" style="width:30px">${m}</div>
-          <div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=80?'var(--success)':v>=65?'var(--primary)':'var(--danger)'}"></div></div>
-          <div class="bar-val">${v}%</div>
-        </div>`).join('')}
+        ${yearData.map(({m,v})=>`<div class="bar-row"><div class="bar-lbl" style="width:30px">${m}</div><div class="bar-outer"><div class="bar-inner" style="width:${v}%;background:${v>=80?'var(--success)':v>=65?'var(--primary)':'var(--danger)'}"></div></div><div class="bar-val">${v}%</div></div>`).join('')}
       </div>`;
   }
 }
 
-// ─── PSYCHOLOGY ───────────────────────────────────────────────────────────────
 function renderPsychology() {
-  const ul = document.getElementById('urge-list');
-  ul.innerHTML = state.urges.length
-    ? state.urges.map(u=>`<div class="urge-item">
-        <div><strong>${u.habit}</strong><br><small style="color:var(--text2)">${u.time}</small></div>
-        <span style="font-weight:700;color:${u.resisted?'var(--success)':'var(--danger)'}">${u.resisted?'Resisted ✓':'Gave in ✗'}</span>
-      </div>`).join('')
-    : '<p style="font-size:13px;color:var(--text3)">No urges logged yet.</p>';
-
-  const tl = document.getElementById('trigger-list');
-  tl.innerHTML = state.triggers.length
-    ? `<div class="trigger-chips">${state.triggers.map(t=>`<span class="trigger-chip">${t.t}</span>`).join('')}</div>`
-    : '';
-
-  const wd = document.getElementById('why-display');
-  wd.innerHTML = state.whyQuit ? `<div class="why-box">"${state.whyQuit}"</div>` : '';
-  const wi = document.getElementById('why-input');
-  if(wi) wi.value = state.whyQuit||'';
+  const ul=document.getElementById('urge-list');
+  ul.innerHTML=state.urges.length?state.urges.map(u=>`<div class="urge-item"><div><strong>${u.habit}</strong><br><small style="color:var(--text2)">${u.time}</small></div><span style="font-weight:700;color:${u.resisted?'var(--success)':'var(--danger)'}">${u.resisted?'Resisted ✓':'Gave in ✗'}</span></div>`).join(''):'<p style="font-size:13px;color:var(--text3)">No urges logged yet.</p>';
+  const tl=document.getElementById('trigger-list');
+  tl.innerHTML=state.triggers.length?`<div class="trigger-chips">${state.triggers.map(t=>`<span class="trigger-chip">${t.t}</span>`).join('')}</div>`:'';
+  const wd=document.getElementById('why-display');
+  wd.innerHTML=state.whyQuit?`<div class="why-box">"${state.whyQuit}"</div>`:'';
+  const wi=document.getElementById('why-input');
+  if(wi) wi.value=state.whyQuit||'';
 }
 
 function openLogUrge() {
-  const donts = state.habits.filter(h=>h.type==='dont');
+  const donts=state.habits.filter(h=>h.type==='dont');
   openModal(`
     <div class="modal-title">🌊 Log an urge</div>
-    <div class="form-group"><label>Related to which habit?</label><select id="u-habit">
-      <option>General urge</option>
-      ${donts.map(h=>`<option>${h.name}</option>`).join('')}
-    </select></div>
-    <div class="form-group"><label>Did you resist?</label><select id="u-res">
-      <option value="1">✅ Yes, I resisted it!</option>
-      <option value="0">❌ No, I gave in</option>
-    </select></div>
-    <div class="modal-foot">
-      <button class="btn" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="saveUrge()">Log urge</button>
-    </div>
+    <div class="form-group"><label>Related to which habit?</label><select id="u-habit"><option>General urge</option>${donts.map(h=>`<option>${h.name}</option>`).join('')}</select></div>
+    <div class="form-group"><label>Did you resist?</label><select id="u-res"><option value="1">✅ Yes, I resisted!</option><option value="0">❌ No, I gave in</option></select></div>
+    <div class="modal-foot"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveUrge()">Log urge</button></div>
   `);
 }
 
 function saveUrge() {
-  const hab = document.getElementById('u-habit').value;
-  const res = document.getElementById('u-res').value==='1';
+  const hab=document.getElementById('u-habit').value;const res=document.getElementById('u-res').value==='1';
   state.urges.unshift({time:now(),habit:hab,resisted:res});
-  if(res) { state.totalPoints+=10; showToast('+10 pts for resisting! 💪','success'); }
-  else showToast('You can do better next time. Log it and move on.','warn');
-  save(); closeModal(); renderPsychology();
+  if(res){state.totalPoints+=10;showToast('+10 pts for resisting! 💪','success');}
+  else showToast('Log it and move on. 💪','warn');
+  save();closeModal();renderPsychology();
 }
 
-let timerSecs=600, timerRunning=false, timerInt=null;
-function toggleTimer() {
-  if(timerRunning) { clearInterval(timerInt); timerRunning=false; document.getElementById('timer-btn').textContent='Resume'; }
-  else {
-    timerRunning=true; document.getElementById('timer-btn').textContent='Pause';
+let timerSecs=600,timerRunning=false,timerInt=null;
+function toggleTimer(){
+  if(timerRunning){clearInterval(timerInt);timerRunning=false;document.getElementById('timer-btn').textContent='Resume';}
+  else{
+    timerRunning=true;document.getElementById('timer-btn').textContent='Pause';
     timerInt=setInterval(()=>{
       timerSecs--;
-      const m=Math.floor(timerSecs/60), s=timerSecs%60;
-      document.getElementById('timer-disp').textContent=m+':'+String(s).padStart(2,'0');
-      if(timerSecs<=0) {
-        clearInterval(timerInt); timerRunning=false;
-        state.totalPoints+=5; save();
-        document.getElementById('timer-done').style.display='block';
-        document.getElementById('timer-btn').textContent='Start';
-        showToast('+5 pts! Craving delayed! 🎯','success');
-      }
+      document.getElementById('timer-disp').textContent=Math.floor(timerSecs/60)+':'+String(timerSecs%60).padStart(2,'0');
+      if(timerSecs<=0){clearInterval(timerInt);timerRunning=false;state.totalPoints+=5;save();document.getElementById('timer-done').style.display='block';document.getElementById('timer-btn').textContent='Start';showToast('+5 pts! Craving delayed! 🎯','success');}
     },1000);
   }
 }
-function resetTimer() {
-  clearInterval(timerInt); timerRunning=false; timerSecs=600;
-  document.getElementById('timer-disp').textContent='10:00';
-  document.getElementById('timer-btn').textContent='Start';
-  document.getElementById('timer-done').style.display='none';
-}
+function resetTimer(){clearInterval(timerInt);timerRunning=false;timerSecs=600;document.getElementById('timer-disp').textContent='10:00';document.getElementById('timer-btn').textContent='Start';document.getElementById('timer-done').style.display='none';}
+function setTrigger(t){document.getElementById('trigger-input').value=t;}
+function saveTrigger(){const v=document.getElementById('trigger-input').value.trim();if(!v)return;state.triggers.push({t:v,time:now()});document.getElementById('trigger-input').value='';save();renderPsychology();showToast('Trigger logged.');}
+function saveWhy(){const v=document.getElementById('why-input').value.trim();if(!v)return;state.whyQuit=v;save();renderPsychology();showToast('Reason saved! 💜','success');}
 
-function setTrigger(t) { document.getElementById('trigger-input').value=t; }
-function saveTrigger() {
-  const v=document.getElementById('trigger-input').value.trim();
-  if(!v) return;
-  state.triggers.push({t:v,time:now()});
-  document.getElementById('trigger-input').value='';
-  save(); renderPsychology(); showToast('Trigger logged.');
-}
-function saveWhy() {
-  const v=document.getElementById('why-input').value.trim();
-  if(!v) return;
-  state.whyQuit=v; save(); renderPsychology(); showToast('Reason saved! 💜','success');
-}
+function openModal(html){document.getElementById('modal-inner').innerHTML=html;document.getElementById('modal').style.display='flex';}
+function closeModal(){document.getElementById('modal').style.display='none';}
+function bgClose(e){if(e.target===document.getElementById('modal'))closeModal();}
 
-// ─── MODAL ────────────────────────────────────────────────────────────────────
-function openModal(html) { document.getElementById('modal-inner').innerHTML=html; document.getElementById('modal').style.display='flex'; }
-function closeModal() { document.getElementById('modal').style.display='none'; }
-function bgClose(e) { if(e.target===document.getElementById('modal')) closeModal(); }
-
-// ─── TOAST ────────────────────────────────────────────────────────────────────
 let toastT=null;
-function showToast(msg,type='') {
+function showToast(msg,type=''){
   const t=document.getElementById('toast');
   t.textContent=msg;
   t.style.background=type==='success'?'#16A34A':type==='warn'?'#B45309':'#1E1E2E';
   t.classList.add('show');
-  if(toastT) clearTimeout(toastT);
+  if(toastT)clearTimeout(toastT);
   toastT=setTimeout(()=>t.classList.remove('show'),2600);
 }
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
 renderDashboard();
 </script>
 </body>
